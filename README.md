@@ -2,7 +2,7 @@
 
 ## After fresh Ubuntu 20 install (minimal)
 
-Packages
+**Packages**
 
 ```bash
 sudo apt-get install git xclip neofetch
@@ -25,7 +25,7 @@ sudo apt-get install solaar
 sudo apt install imwheel
 ```
 
-Docker
+**Docker**
 
 ```bash
 sudo apt-get update
@@ -43,7 +43,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Appimagelauncher
+**Appimagelauncher**
 
 ```bash
 sudo add-apt-repository ppa:appimagelauncher-team/stable
@@ -51,11 +51,11 @@ sudo apt update
 sudo apt install appimagelauncher
 ```
 
-Pcloud
+**Pcloud**
 
 Follow instruction from [link](https://www.pcloud.com/how-to-install-pcloud-drive-linux.html) and use Appimagelauncher to integrate it with Ubuntu.
 
-Import ssh keys
+**Import ssh keys**
 
 ```bash
 # copy or generate ssh key (remember about permisions 600)
@@ -64,6 +64,8 @@ eval "$(ssh-agent -s)"
 # Add new key
 ssh-add ~/.ssh/github_key
 ```
+
+**Wallpaper**
 
 Copy wallpaper to `/usr/share/backgrounds` and name it `wallpaper.jpg` (remamber about permisisons and owner)
 
