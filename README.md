@@ -46,6 +46,8 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github_key
 ```
 
+Copy wallpaper to `/usr/share/backgrounds` and name it `wallpaper.jpg` (remamber about permisisons and owner)
+
 ## Config sync
 
 Based on [this](https://www.atlassian.com/git/tutorials/dotfiles).
