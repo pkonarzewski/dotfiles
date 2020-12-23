@@ -2,7 +2,7 @@
 
 ## After fresh Ubuntu 20 install (minimal)
 
-Packages
+**Packages**
 
 ```bash
 sudo apt-get install git xclip neofetch
@@ -25,7 +25,7 @@ sudo apt-get install solaar
 sudo apt install imwheel
 ```
 
-Docker
+**Docker**
 
 ```bash
 sudo apt-get update
@@ -34,9 +34,28 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt update
 sudo apt install docker-ce
+# permision for non-root user
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+# docker compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Import ssh keys
+**Appimagelauncher**
+
+```bash
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+sudo apt install appimagelauncher
+```
+
+**Pcloud**
+
+Follow instruction from [link](https://www.pcloud.com/how-to-install-pcloud-drive-linux.html) and use Appimagelauncher to integrate it with Ubuntu.
+
+**Import ssh keys**
 
 ```bash
 # copy or generate ssh key (remember about permisions 600)
@@ -45,6 +64,8 @@ eval "$(ssh-agent -s)"
 # Add new key
 ssh-add ~/.ssh/github_key
 ```
+
+**Wallpaper**
 
 Copy wallpaper to `/usr/share/backgrounds` and name it `wallpaper.jpg` (remamber about permisisons and owner)
 
@@ -61,23 +82,16 @@ config config --local status.showUntrackedFiles no
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bash_aliases
 ```
 
-### Setting up env
-
-Install linux packages
-
-```
-sudo add-apt-repository ppa:regolith-linux/release
-sudo apt install regolith-desktop i3xrocks-media-player i3xrocks-cpu-usage i3xrocks-time i3xrocks-memory
-```
-
 ### Working
+
+example:
 
 ```bash
 config status
 config add .vimrc
-config commit -m "Add vimrc"
+config commit -m "Sync"
 config add .bashrc
-config commit -m "Add bashrc"
+config commit -m "Sync"
 config push
 ```
 
@@ -88,20 +102,4 @@ git clone --bare <git-repo-url> $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config checkout
 config config --local status.showUntrackedFiles no
-```
-
-
-OneDrive
-
-based on [this](https://itsfoss.com/use-onedrive-linux-rclone/)
-
-```bash
-sudo apt-get install rclone
-rclone config
-# go through process
-mkdir ~/OneDrive
-# test
-rclone --vfs-cache-mode writes mount "OneDrive":  ~/OneDrive
-# if all ok add to Startap Applications
-sh -c "rclone --vfs-cache-mode writes mount \"OneDrive\": ~/OneDrive"
 ```
