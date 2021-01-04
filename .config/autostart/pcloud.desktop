@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=pcloud
 Comment=pcloudstartup script
-Exec=/home/patryk/Appimages/pcloud
+Exec=/home/patryk/Applications/pcloud_17576971d6150f57094ddd5c05a66a90
 StartupNotify=false
 Terminal=false
