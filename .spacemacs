@@ -33,8 +33,12 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(python
+     (sql :variables
+          sql-capitalize-keywords t
+          sql-auto-indent nil)
      (ranger :variables
-              ranger-show-preview t)
+             ranger-show-preview t)
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
