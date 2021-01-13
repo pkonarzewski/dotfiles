@@ -4,10 +4,15 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdcommenter'
+  Plug 'jpalardy/vim-slime', { 'for': 'python' }
+  Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+  Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 colorscheme gruvbox
 
+set nocompatible
+filetype off
 set encoding=utf-8
 syntax enable
 set number
