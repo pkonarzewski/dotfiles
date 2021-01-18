@@ -107,7 +107,7 @@ config push
 ### Init on other system
 
 ```bash
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare git@github.com:pkonarzewski/dotfiles.git $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config checkout
 config config --local status.showUntrackedFiles no
