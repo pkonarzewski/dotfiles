@@ -38,7 +38,8 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'black)
      (ranger :variables
-              ranger-show-preview t)
+             ranger-show-preview t)
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
