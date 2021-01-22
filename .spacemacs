@@ -37,6 +37,9 @@ This function should only modify configuration layer settings."
              python-lsp-server 'mspyls
              python-test-runner 'pytest
              python-formatter 'black)
+     (sql :variables
+          sql-capitalize-keywords t
+          sql-auto-indent nil)
      (ranger :variables
              ranger-show-preview t)
      yaml
