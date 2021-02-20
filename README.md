@@ -69,13 +69,29 @@ ssh-add ~/.ssh/github_key
 
 Copy wallpaper to `/usr/share/backgrounds` and name it `wallpaper.jpg` (remamber about permisisons and owner)
 
-**Neovim**
+**Spacemacs**
 
-Init package plugin
+```
+sudo snap install emacs --classic
+mv ~/.emacs.d ~/.emacs.d.backup
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
 
-```bash
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+TODO: My configuration
+
+**Python 3.9**
+
+```
+sudo apt update
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+
+wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
+tar -xf Python-3.9.1.tgz
+
+cd Python-3.9.1
+./configure --enable-optimizations
+make -j 4
+sudo make altinstall
 ```
 
 ## Config sync
